@@ -2,3 +2,5 @@ dashscope
 tenacity
 sentence-transformers 
 torch
+dotenv
+langgraph
