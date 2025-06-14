@@ -1,0 +1,4 @@
+dashscope 
+tenacity
+sentence-transformers 
+torch
