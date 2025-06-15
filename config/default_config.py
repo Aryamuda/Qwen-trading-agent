@@ -16,11 +16,11 @@ s   for different environments (e.g., development, testing, production)
     # 1. Core Intelligence Engine
     
     # LLM Configuration
-    LLM_MODEL = os.getenv('LLM_MODEL', 'qwen-plus')
+    LLM_MODEL = os.getenv('LLM_MODEL', 'qwen-turbo')
     DASHSCOPE_API_KEY = os.getenv('DASHSCOPE_API_KEY', None)
-    LLM_TEMPERATURE = float(os.getenv('LLM_TEMPERATURE', 0.7))
-    LLM_TOP_P = float(os.getenv('LLM_TOP_P', 0.8))
-    LLM_MAX_TOKENS = int(os.getenv('LLM_MAX_TOKENS', 1500))
+    LLM_TEMPERATURE = float(os.getenv('LLM_TEMPERATURE', 0.4))
+    LLM_TOP_P = float(os.getenv('LLM_TOP_P', 0.5))
+    LLM_MAX_TOKENS = int(os.getenv('LLM_MAX_TOKENS', 500))
 
     # Embedding Model Configuration
     EMBEDDING_MODEL = os.getenv('EMBEDDING_MODEL', 'all-MiniLM-L6-v2')

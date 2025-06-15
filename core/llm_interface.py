@@ -1,5 +1,3 @@
-# core/llm_interface.py
-
 import os
 from abc import ABC, abstractmethod
 from http import HTTPStatus
@@ -106,9 +104,9 @@ if __name__ == '__main__':
     try:
         # You can now configure the LLM with the new parameters
         qwen_plus_llm = QwenLLM(
-            model='qwen-plus',
-            temperature=0.7,  # A bit more deterministic
-            top_p=0.8,
+            model='qwen-turbo',
+            temperature=0.3,  # More deterministic
+            top_p=0.4,
             max_tokens=500     # Limit the response length
         ) 
         
