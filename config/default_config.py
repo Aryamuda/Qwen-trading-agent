@@ -13,11 +13,11 @@ s   for different environments (e.g., development, testing, production)
     without changing the codebase.
     """
 
-    # --- 1. Core Intelligence Engine ---
+    # 1. Core Intelligence Engine
     
     # LLM Configuration
     LLM_MODEL = os.getenv('LLM_MODEL', 'qwen-plus')
-    DASHSCOPE_API_KEY = os.getenv('DASHSCOPE_API_KEY', None) 
+    DASHSCOPE_API_KEY = os.getenv('DASHSCOPE_API_KEY', None)
     LLM_TEMPERATURE = float(os.getenv('LLM_TEMPERATURE', 0.7))
     LLM_TOP_P = float(os.getenv('LLM_TOP_P', 0.8))
     LLM_MAX_TOKENS = int(os.getenv('LLM_MAX_TOKENS', 1500))
@@ -25,7 +25,7 @@ s   for different environments (e.g., development, testing, production)
     # Embedding Model Configuration
     EMBEDDING_MODEL = os.getenv('EMBEDDING_MODEL', 'all-MiniLM-L6-v2')
 
-    # --- 2. API & Dataflow Settings ---
+    # 2. API & Dataflow Settings
     
     # General API retry settings
     RETRY_ATTEMPTS = int(os.getenv('RETRY_ATTEMPTS', 3))
@@ -36,7 +36,7 @@ s   for different environments (e.g., development, testing, production)
     # Finnhub API Key
     FINNHUB_API_KEY = os.getenv('FINNHUB_API_KEY', None) # Recommended to be set in .env
 
-    # --- 3. Agent & Graph Settings ---
+    # 3. Agent & Graph Settings
     
     # Maximum number of debate rounds in the research phase
     MAX_DEBATE_ROUNDS = int(os.getenv('MAX_DEBATE_ROUNDS', 2))

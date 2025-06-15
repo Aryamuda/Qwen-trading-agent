@@ -4,3 +4,9 @@ sentence-transformers
 torch
 dotenv
 langgraph
+yfinance
+pandas
+finnhub-python
+pygooglenews
+stocksta
+praw
