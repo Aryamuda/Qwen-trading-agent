@@ -1,16 +1,10 @@
-# dataflows/interface.py
-
 import sys
 import os
-
-# --- Path Fix ---
-# Adds the project's root directory to the Python path for direct script testing.
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 
 import pandas as pd
 from typing import List, Dict
 
-# Import all our data utility functions
 from dataflows.yfin_utils import get_historical_data
 from dataflows.finnhub_utils import get_company_news, get_financial_fundamentals
 from dataflows.googlenews_utils import get_google_news
@@ -24,8 +18,7 @@ class DataInterface:
     for agents to call. This adheres to the "Interface Pattern" from the blueprint.
     """
     
-    # --- Individual Data Fetching Methods ---
-    # These methods allow agents to request only the specific data they need.
+    # Individual Data Fetching Methods
 
     def get_historical_data(self, stock_symbol: str, period: str = "1y") -> pd.DataFrame:
         """Wrapper for the yfin_utils function."""
@@ -51,7 +44,7 @@ class DataInterface:
         """Wrapper for the reddit_utils function."""
         return get_reddit_sentiment(stock_symbol, subreddits, limit)
 
-    # --- High-Level Aggregate Method ---
+    # High-Level Aggregate Method
 
     def get_all_data_for_analyst(self, stock_symbol: str) -> Dict[str, pd.DataFrame | Dict]:
         """

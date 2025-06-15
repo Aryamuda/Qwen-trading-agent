@@ -10,3 +10,4 @@ finnhub-python
 pygooglenews
 stocksta
 praw
+chromadb
